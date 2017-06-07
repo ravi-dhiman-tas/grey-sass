@@ -1,0 +1,69 @@
+body
+    color: $text
+    font-size: 16px
+    font-weight: 300
+    font-family: 'Fira Sans', sans-serif
+
+
+a
+    color: $primary
+
+    &:hover
+        color: lighten($primary, 15%)
+        text-decoration: none
+
+    &:active, &:focus
+        color: darken($primary, 4%)
+        text-decoration: none
+
+
+h1, h2, h3, h4, h5, h6
+    color: $heading
+
+
+h1, .h1
+    font-size: $h1-size
+    margin-top: $h1-spacing
+    margin-bottom: $h1-spacing
+    font-weight: $h1-weight
+
+    @include media-breakpoint-down(sm)
+        font-size: $h1-size * 0.7
+
+
+h2, .h2
+    font-size: $h2-size
+    margin-top: $h2-spacing
+    margin-bottom: $h2-spacing
+    font-weight: $h2-weight
+
+    @include media-breakpoint-down(sm)
+        font-size: $h2-size * 0.7
+
+h3, .h3
+    font-size: $h3-size
+    margin-top: $h3-spacing
+    margin-bottom: $h3-spacing
+    font-weight: $h3-weight
+
+    @include media-breakpoint-down(sm)
+        font-size: $h3-size * 0.7
+
+
+h4, .h4
+    font-size: $h4-size
+    margin-top: $h4-spacing
+    margin-bottom: $h4-spacing
+    font-weight: $h4-weight
+
+    @include media-breakpoint-down(sm)
+        font-size: $h4-size * 0.7
+
+
+p
+    margin-bottom: $base-spacing
+    line-height: 1.7
+
+
+img
+    max-width: 100%

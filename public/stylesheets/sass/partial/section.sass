@@ -1,0 +1,168 @@
+// Section base
+// ----------------
+.section
+    display: block
+    position: $section-position
+    padding: $section-padding
+
+    @include media-breakpoint-down(lg)
+        padding: $section-padding-md !important
+
+    @include media-breakpoint-down(md)
+        padding: $section-padding-sm !important
+
+    @include media-breakpoint-down(sm)
+        padding: $section-padding-xs !important
+
+    .section-heading
+        font-size: $section-heading-size
+        margin-bottom: $section-heading-spacing
+        letter-spacing: 1px
+        text-transform: uppercase
+
+        @include media-breakpoint-down(sm)
+            font-size: $section-heading-size * 0.5
+
+    .section-content
+        font-size: $section-content-size
+        letter-spacing: 1px
+
+        @include media-breakpoint-down(sm)
+            font-size: $section-content-size * 0.8
+
+// First Intro section
+// ----------------
+.section-intro
+    height: 100%
+    height: $section-intro-height
+
+    &.light
+        color: #fff
+
+    p, h1, h2
+        color: inherit
+
+
+// Section sizes
+// ----------------
+.section-lg
+    padding: $section-padding-md
+
+
+.section-sm
+    padding: $section-padding-sm
+
+
+.section-xs
+    padding: $section-padding-xs
+
+
+.section-container
+    display: table
+    width: 100%
+    height: 100%
+    border-collapse: collapse
+    border-spacing: 0
+
+    .section-content
+        display: table-cell
+        vertical-align: middle
+
+
+// Overlay Image on background
+// ----------------
+.section-overlay, .overlay-image, .overlay-color
+    position: absolute
+    top: 0
+    left: 0
+    bottom: 0
+    right: 0
+    width: 100%
+    height: 100%
+
+
+.section-overlay
+    z-index: -1
+
+
+.overlay-image
+    img
+        width: 100%
+
+
+.background-cover
+    background-size: cover
+
+
+.background-center
+    background-position: 0 50%
+
+
+.background-fixed
+    background-attachment: fixed
+
+
+// Heading divider
+// ----------------
+.heading-divider
+    position: relative
+
+    &:after
+        content: ''
+        position: absolute
+        height: 1px
+        background: lighten($heading, 70%)
+        @include transition(all 0.4s ease-in-out)
+
+    &.light
+        &:after
+            background: darken(#fff, 3%)
+
+    &:after
+        bottom: -15px
+        left: 0
+        width: 0
+
+    &.center
+        &:after
+            bottom: -15px
+            left: 50%
+            width: 0
+            @include translate(-50%, 0)
+
+    &.right
+        &:after
+            bottom: -15px
+            right: 0
+            width: 0
+
+    &:hover:after
+        width: 30%
+
+
+// Mouse wheel
+// ----------------
+.mouse-wheel
+    display: block
+    position: absolute
+    bottom: 20px
+    width: 30px
+    height: 40px
+    left: 50%
+    margin-left: -15px
+
+    &:after
+        content: ''
+        position: absolute
+        left: 50%
+        background: $heading
+        width: 10px
+        height: 10px
+        margin-left: -5px
+        @include border-radius(50%)
+        @include animation(animation-slidedown 0.8s ease-in-out infinite)
+
+    &.light:after
+        background: #fff
+
+@include animation-slidedown

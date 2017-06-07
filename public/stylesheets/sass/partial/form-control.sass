@@ -1,0 +1,174 @@
+label, .label
+    font-size: $base-font * 0.9
+    margin-bottom: $fm-label-spacing
+    font-weight: $fm-label-font-weight
+    color: $fm-label-color
+
+
+.fm-control
+    padding: $fm-padding
+    display: $fm-display
+    border: $fm-border
+    border-radius: $fm-border-radius
+    font-size: $fm-font-size
+    line-height: $fm-line-height
+    background: $fm-bg
+    @include transition($fm-transition)
+
+    &:focus
+        outline: $fm-outline
+        border-color: $fm-border-active
+        box-shadow: $fm-shadow-active
+
+    &.danger
+        border-color: $fm-border-danger
+
+        &:focus
+            box-shadow: $fm-shadow-danger
+
+    &.success
+        border-color: $fm-border-success
+
+        &:focus
+            box-shadow: $fm-shadow-success
+
+    &::placeholder
+        color: $fm-placeholder-color
+
+
+textarea.fm-control
+    min-height: $fm-txt-height
+
+
+.fm-select
+    position: relative
+    display: $fm-display
+    background: $fm-bg
+
+    select
+        padding: $fm-padding
+        display: $fm-display
+        border: $fm-border
+        border-radius: $fm-border-radius
+        font-size: $fm-font-size
+        position: relative
+        z-index: 2
+        background: transparent
+        line-height: $fm-line-height
+        -webkit-appearance: $fm-slt-appear
+        -moz-appearance: $fm-slt-appear
+        appearance: $fm-slt-appear
+        @include transition($fm-transition)
+
+        &:focus
+            outline: $fm-outline
+            border-color: $fm-border-active
+            box-shadow: $fm-shadow-active
+
+        &.danger
+            border-color: $fm-border-danger
+
+            &:focus
+                box-shadow: $fm-shadow-danger
+
+        &.success
+            border-color: $fm-border-success
+
+            &:focus
+                box-shadow: $fm-shadow-success
+
+        & + .caret
+            display: none
+            position: absolute
+            right: 0
+            top: 0
+            bottom: 0
+            width: 10px
+            height: 10px
+            z-index: 1
+            margin: 12px 16px
+            border: $fm-border
+            border-top-width: 0
+            border-right-width: 0
+            @include rotate(-45deg)
+
+        &:not([multiple])
+            padding-right: $fm-slt-padding
+
+        &:not([multiple]) + .caret
+            display: block
+
+
+.fm-group
+    display: $fmg-display
+    margin-bottom: $fmg-spacing
+    position: relative
+
+    .fm-error
+        display: none
+        position: absolute
+        top: 100%
+        left: 0
+        right: 0
+        margin-top: -2px
+        z-index: 99
+        color: #fff
+        background: $danger
+        padding: 3px nth($fm-padding, 2)
+        font-size: $base-font * 0.7
+        border-radius: $fm-border-radius
+
+    .fm-success
+        display: none
+        position: absolute
+        left: 0
+        right: 0
+        top: 100%
+        margin-top: -2px
+        z-index: 99
+        color: #fff
+        background: $success
+        padding: 3px nth($fm-padding, 2)
+        font-size: $base-font * 0.7
+        border-radius: $fm-border-radius
+
+    &.active
+        .fm-control, .fm-select select
+            border-color: $fm-border-active
+
+            &:focus
+                box-shadow: $fm-shadow-active
+
+    &.has-error
+        .fm-control, .fm-select select
+            border-color: $fm-border-danger
+
+            &:focus
+                box-shadow: $fm-shadow-danger
+
+        .fm-error
+            display: block
+
+    &.has-success
+        .fm-control, .fm-select select
+            border-color: $fm-border-success
+
+            &:focus
+                box-shadow: $fm-shadow-success
+
+        .fm-success
+            display: block
+
+
+.fm-group
+    .fm-control
+        display: $fmg-display
+        width: $fmg-width
+
+    .fm-select
+        display: $fmg-display
+        width: $fmg-width
+
+        select
+            display: $fmg-display
+            width: $fmg-width

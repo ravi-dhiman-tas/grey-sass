@@ -1,0 +1,99 @@
+button, .button
+    display: $btn-display
+    padding: $btn-padding
+    border: $btn-border
+    font-size: $btn-font-size
+    line-height: $btn-line-height
+    font-weight: $btn-font-weight
+    color: $btn-color
+    letter-spacing: $btn-text-space
+    text-transform: $btn-text-case
+    background: lighten($grey-base, 70%)
+    white-space: nowrap
+    @include border-radius($btn-radius)
+    @include transition($btn-transition)
+
+    &:hover
+        color: $btn-color
+        background: lighten($grey-base, 75%)
+
+    &:focus, &:active
+        color: $btn-color
+        outline: none
+        background: lighten($grey-base, 65%)
+
+    &[disabled], &.disabled
+        cursor: not-allowed
+        opacity: 0.6
+
+
+.button-primary
+    @include button-style($btn-primary-bg, $btn-primary-color)
+
+
+.button-secondry
+    @include button-style($btn-secondry-bg, $btn-secondry-color)
+
+
+.button-success
+    @include button-style($btn-success-bg, $btn-success-color)
+
+
+.button-danger
+    @include button-style($btn-danger-bg, $btn-danger-color)
+
+
+.button-warning
+    @include button-style($btn-warning-bg, $btn-warning-color)
+
+
+.button-invert
+    @include button-style($btn-invert-bg, $btn-invert-color)
+
+
+.button-outline
+    @include button-style(transparent, $btn-color, lighten($grey-base, 70%))
+
+
+.button-outline-primary
+    @include button-style($btn-primary-outline-bg, $btn-primary-outline-color, $btn-primary-outline-border)
+
+
+.button-outline-secondry
+    @include button-style($btn-secondry-outline-bg, $btn-secondry-outline-color, $btn-secondry-outline-border)
+
+
+.button-outline-success
+    @include button-style($btn-success-outline-bg, $btn-success-outline-color, $btn-success-outline-border)
+
+
+.button-outline-danger
+    @include button-style($btn-danger-outline-bg, $btn-danger-outline-color, $btn-danger-outline-border)
+
+
+.button-outline-warning
+    @include button-style($btn-warning-outline-bg, $btn-warning-outline-color, $btn-warning-outline-border)
+
+
+.button-outline-invert
+    @include button-style($btn-invert-outline-bg, $btn-invert-outline-color, $btn-invert-outline-border)
+
+
+.button-lg
+    padding: nth($btn-lg, 1)
+    font-size: nth($btn-lg, 2)
+
+
+.button-sm
+    padding: nth($btn-sm, 1)
+    font-size: nth($btn-sm, 2)
+
+
+.button-xs
+    padding: nth($btn-xs, 1)
+    font-size: nth($btn-xs, 2)
+
+
+button, .button + button, .button
+    margin-right: 3px
+    margin-bottom: 3px

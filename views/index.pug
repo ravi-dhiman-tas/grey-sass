@@ -1,0 +1,100 @@
+extends layout
+
+block content
+    .section.section-intro
+        .section-container.text-center
+            .section-content
+                .container
+                    .row
+                        .col-md-10.col-md-offset-1
+                            h1.heading-divider.center A dead simple, responsive solution
+                            p We work for both clients and developers. Grey Shades covered 90% of CSS styles to get rid of custom styles. Buy and enjoy a seamless expreience.
+                            p
+                                a(class='button button-outline', href='#') Buy Now
+
+        a.mouse-wheel(href='#')
+
+        .section-overlay
+            //- .overlay-image(style='background-image: url(../images/banner/0002.jpg)', class='background-cover background-center')
+            .overlay-color.background-grey-dark.opacity-1
+            //- .overlay-color.background-primary.opacity-1
+
+
+    .section.section-xs
+        .container.text-center
+            h1.heading-divider.center Buttons
+
+            div
+                button Button
+                button.button-primary Button
+                button.button-secondry Button
+                button.button-success Button
+                button.button-danger Button
+                button.button-warning Button
+                button.button-invert Button
+
+            div
+                button.button-outline-primary Button
+                button.button-outline-secondry Button
+                button.button-outline-success Button
+                button.button-outline-danger Button
+                button.button-outline-warning Button
+                button.button-outline Button
+
+            div
+                button.button-primary.button-xs Extra Small
+                button.button-primary.button-sm Small
+                button.button-primary Normal
+                button.button-primary.button-lg Large
+
+            div
+                button.button-primary(disabled='') Disabled
+                button.button-secondry(disabled='') Disabled
+
+
+    .section.section-xs
+        .container
+            h1.heading-divider.center.text-center Forms
+
+            .row
+                .col-sm-8.col-sm-offset-2
+                    div.fm-group
+                        label First Name:
+                        input(type='text', placeholder='First Name', class='fm-control')
+
+                    div.fm-group
+                        label Last Name:
+                        input(type='text', placeholder='Last Name', class='fm-control active')
+
+                    div.fm-group.has-error
+                        label Email:
+                        input(type='text', placeholder='Email address', class='fm-control')
+                        .fm-error This field is required.
+
+                    div.fm-group
+                        label City:
+                        input(type='text', placeholder='City', class='fm-control success')
+
+                    div.fm-group.has-success
+                        label Country:
+                        .fm-select
+                            select(multiple)
+                                option Select a country
+                                option 2
+                                option 3
+
+                            .caret
+
+                    div.fm-group.has-success
+                        label Country:
+                        .fm-select
+                            select
+                                option Select a country
+                                option 2
+                                option 3
+
+                            .caret
+
+                    div.fm-group
+                        label Address:
+                        textarea(placeholder='Placeholder', class='fm-control')

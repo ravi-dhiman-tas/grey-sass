@@ -1,0 +1,86 @@
+@mixin padding($limit)
+    $i: 0
+    @while $i < $limit
+        .leftpadding-#{$i}
+            padding-left: $i + px
+
+        .rightpadding-#{$i}
+            padding-right: $i + px
+
+        .toppadding-#{$i}
+            padding-top: $i + px
+
+        .bottompadding-#{$i}
+            padding-bottom: $i + px
+
+        .padding-#{$i}
+            padding: $i + px
+
+        $i: $i + 5
+
+    [padding]
+        padding: $base-padding
+
+    [padding-vertical]
+        padding-top: $base-padding
+        padding-bottom: $base-padding
+
+    [padding-horizontal]
+        padding-left: $base-padding
+        padding-right: $base-padding
+
+    [padding-left]
+        padding-left: $base-padding
+
+    [padding-right]
+        padding-right: $base-padding
+
+    [padding-top]
+        padding-top: $base-padding
+
+    [padding-bottom]
+        padding-bottom: $base-padding
+
+
+@mixin margin($limit)
+    $i: 0px
+    @while $i < $limit
+        .leftmargin-#{$i}
+            margin-left: $i + px
+
+        .rightmargin-#{$i}
+            margin-right: $i + px
+
+        .topmargin-#{$i}
+            margin-top: $i + px
+
+        .bottommargin-#{$i}
+            margin-bottom: $i + px
+
+        .margin-#{$i}
+            margin: $i + px
+
+        $i: $i + 5
+
+    [margin]
+        margin: $base-margin
+
+    [margin-vertical]
+        margin-top: $base-margin
+        margin-bottom: $base-margin
+
+    [margin-horizontal]
+        margin-left: $base-margin
+        margin-right: $base-margin
+
+    [margin-left]
+        margin-left: $base-margin
+
+    [margin-right]
+        margin-right: $base-margin
+
+    [margin-top]
+        margin-top: $base-margin
+
+    [margin-bottom]
+        margin-bottom: $base-margin

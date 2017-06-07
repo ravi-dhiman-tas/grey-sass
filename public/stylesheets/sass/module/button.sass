@@ -1,0 +1,12 @@
+@mixin button-style($bg, $c, $b: transparent)
+    background: $bg
+    color: $c
+    border-color: $b
+
+    &:hover
+        color: $c
+        background: lighten($bg, 10%)
+
+    &:focus, &:active
+        color: $c
+        background: darken($bg, 5%)
